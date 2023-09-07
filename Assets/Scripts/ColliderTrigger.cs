@@ -11,8 +11,10 @@ public class ColliderTrigger : MonoBehaviour
 
     public Light Luz;
 
+    public GameObject Coll;
+
     private bool activated = false;
-    public float IntensidadAumento = 1.0f;
+    public float Rotacion = 1.0f;
     
     void Start()
     {
@@ -30,7 +32,7 @@ public class ColliderTrigger : MonoBehaviour
         Debug.Log("Entro a Trigger");
         if(other.tag == "Player")
         {
-            Luz.intensity += IntensidadAumento;
+            Luz.transform.rotation = Quaternion.Euler(100f,0f,0f);
 
             if (!activated)
             {
@@ -51,7 +53,10 @@ public class ColliderTrigger : MonoBehaviour
 
         if (other.tag == "Player")
         {
-            Luz.intensity -= IntensidadAumento;
+            Luz.transform.rotation = Quaternion.Euler(-100f,0f,0f);
+            audioSorce.enabled = false;
+            Coll.transform.position = Coll.transform.position + new Vector3(-50, -50, 0);
         }
+        
     }
 }
