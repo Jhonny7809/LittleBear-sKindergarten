@@ -13,6 +13,8 @@ public class ColliderTrigger : MonoBehaviour
 
     public GameObject Coll;
 
+    public CameraShake cameraShake;
+
     private bool activated = false;
     public float Rotacion = 1.0f;
     
@@ -40,6 +42,8 @@ public class ColliderTrigger : MonoBehaviour
 
                 audioSorce.enabled = true;
                 objeto.SetActive(true);
+
+                StartCoroutine(cameraShake.Temblor());
             }
         }
 

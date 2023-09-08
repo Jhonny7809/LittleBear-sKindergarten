@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MenuInicial.unity
+    guid: b3e4d61b111058642a120d64b4e14ebd
+  - enabled: 1
+    path: Assets/Scenes/Hector.unity
+    guid: 11c930f9d464ca5459e4b4a7669040a9
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects: {}
