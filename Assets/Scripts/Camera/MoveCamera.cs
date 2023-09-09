@@ -25,7 +25,7 @@ public class MoveCamera : MonoBehaviour
         if (ver != 0)
         {
             //camera.Rotate(Vector3.left ver * Sens.y);
-            float angle = (camera.localEulerAngles.x - ver * Sens.y + 360) % 360;
+            float angle = (camera.localEulerAngles.x - (ver * Sens.y) + 360) % 360;
             if (angle > 180)
             {
                 angle -= 360;
