@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44300318, g: 0.49219626, b: 0.57192606, a: 1}
+  m_IndirectSpecularColor: {r: 0.44300273, g: 0.49219579, b: 0.5719249, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -393,7 +393,6 @@ GameObject:
   - component: {fileID: 401361336}
   - component: {fileID: 401361335}
   - component: {fileID: 401361334}
-  - component: {fileID: 401361337}
   - component: {fileID: 401361338}
   m_Layer: 0
   m_Name: Camera
@@ -477,18 +476,6 @@ Transform:
   - {fileID: 1369653314}
   m_Father: {fileID: 1519192067}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &401361337
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 401361333}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48b592a089d06c44b8340d68e40c31d9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &401361338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -897,9 +884,9 @@ GameObject:
   - component: {fileID: 1519192064}
   - component: {fileID: 1519192063}
   - component: {fileID: 1519192068}
-  - component: {fileID: 1519192070}
   - component: {fileID: 1519192069}
   - component: {fileID: 1519192071}
+  - component: {fileID: 1519192072}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1054,18 +1041,6 @@ MonoBehaviour:
   Coll: {fileID: 1427770189}
   cameraShake: {fileID: 0}
   Rotacion: 1
---- !u!114 &1519192070
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1519192061}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea638eec1e0348a44bf234bc21b26d58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1519192071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1079,6 +1054,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Sens: {x: 1.26, y: 1.91}
+--- !u!114 &1519192072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1519192061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc4115f8214a8d94d85cb7a758035983, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
 --- !u!1 &1848080076
 GameObject:
   m_ObjectHideFlags: 0
