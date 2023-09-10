@@ -8,7 +8,7 @@ public class MoveCamera : MonoBehaviour
     private new Transform camera;
     void Start()
     {
-        camera = transform.Find("MainCamera");
+        camera = transform.Find("Camera");
         Cursor.lockState = CursorLockMode.Locked;
     }
 
@@ -24,7 +24,7 @@ public class MoveCamera : MonoBehaviour
 
         if (ver != 0)
         {
-            //camera.Rotate(Vector3.left ver * Sens.y);
+            camera.Rotate(Vector3.left, ver * Sens.y);
             float angle = (camera.localEulerAngles.x - (ver * Sens.y) + 360) % 360;
             if (angle > 180)
             {
