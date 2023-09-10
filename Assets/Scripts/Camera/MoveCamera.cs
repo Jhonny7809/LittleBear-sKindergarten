@@ -8,7 +8,7 @@ public class MoveCamera : MonoBehaviour
     private new Transform camera;
     void Start()
     {
-        camera = transform.Find("Camera");
+        camera = transform.Find("MainCamera");
         Cursor.lockState = CursorLockMode.Locked;
     }
 

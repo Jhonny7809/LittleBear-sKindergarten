@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class Sonidos : MonoBehaviour
 {
+    public GameObject coll;
     public AudioSource audiosource;
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player" && !audiosource.isPlaying)
         {
             audiosource.Play();
+            coll.SetActive(false);
         }
     }
 }
