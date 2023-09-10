@@ -8,7 +8,7 @@ public class Creditos : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Invoke("WaitforEnd", 30);
+        Invoke("WaitforEnd", 226);
     }
 
     // Update is called once per frame
