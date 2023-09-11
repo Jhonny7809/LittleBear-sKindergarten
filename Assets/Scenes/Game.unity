@@ -229,8 +229,6 @@ GameObject:
   - component: {fileID: 411345418}
   - component: {fileID: 411345417}
   - component: {fileID: 411345421}
-  - component: {fileID: 411345422}
-  - component: {fileID: 411345423}
   m_Layer: 0
   m_Name: Control
   m_TagString: Untagged
@@ -300,8 +298,7 @@ Transform:
   m_LocalPosition: {x: 0.5987549, y: -0.16, z: 0.11149597}
   m_LocalScale: {x: 0.58, y: 0.58, z: 0.58}
   m_ConstrainProportionsScale: 1
-  m_Children:
-  - {fileID: 1298722126}
+  m_Children: []
   m_Father: {fileID: 591782449}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!81 &411345421
@@ -312,32 +309,6 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 411345413}
   m_Enabled: 1
---- !u!114 &411345422
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 411345413}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49e1dfe8a9309504ea5afb488f90b65b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LightFlashLight: {fileID: 511842908}
---- !u!114 &411345423
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 411345413}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: def29998225062b46bc06b30e3fe7cc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Sens: {x: 0.5, y: 0.2}
 --- !u!1 &511842907
 GameObject:
   m_ObjectHideFlags: 0
@@ -443,6 +414,8 @@ GameObject:
   - component: {fileID: 591782449}
   - component: {fileID: 591782448}
   - component: {fileID: 591782447}
+  - component: {fileID: 591782451}
+  - component: {fileID: 591782450}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -464,8 +437,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontalMove: 0
   verticalMove: 0
-  Player: {fileID: 591782448}
-  speed: 3
+  player: {fileID: 591782448}
+  speed: 1
 --- !u!143 &591782448
 CharacterController:
   m_ObjectHideFlags: 0
@@ -506,8 +479,35 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 411345419}
+  - {fileID: 1298722126}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &591782450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 591782446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49e1dfe8a9309504ea5afb488f90b65b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LightFlashLight: {fileID: 511842908}
+--- !u!114 &591782451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 591782446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: def29998225062b46bc06b30e3fe7cc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Sens: {x: 0.5, y: 0.2}
 --- !u!1 &1298722123
 GameObject:
   m_ObjectHideFlags: 0
@@ -585,12 +585,12 @@ Transform:
   m_GameObject: {fileID: 1298722123}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.562, z: 0}
-  m_LocalScale: {x: 1.7241379, y: 1.7241379, z: 1.7241379}
+  m_LocalPosition: {x: 0.5987549, y: 0.16595995, z: 0.11149597}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 511842909}
-  m_Father: {fileID: 411345419}
+  m_Father: {fileID: 591782449}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &4041109750882138
 MeshRenderer:

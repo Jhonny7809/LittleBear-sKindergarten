@@ -36,5 +36,7 @@ public class DragAndDrop : MonoBehaviour,IPointerDownHandler, IDragHandler, IPoi
         {
             transform.position = raycastResult.gameObject.transform.position;
         }
+        canvasgroup.alpha = 1f;
+        canvasgroup.blocksRaycasts = true;
     }
 }

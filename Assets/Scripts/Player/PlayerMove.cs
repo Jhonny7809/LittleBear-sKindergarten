@@ -6,22 +6,22 @@ public class PlayerMove : MonoBehaviour
 {
     public float horizontalMove;
     public float verticalMove;
-    public CharacterController Player;
+    public CharacterController player;
 
     public float speed;
 
-    void Start()
+    private void Start()
     {
-        Player = GetComponent<CharacterController>();
+         player = GetComponent<CharacterController>();
     }
 
-    void Update()
+    private void Update()
     {
         horizontalMove = Input.GetAxis("Horizontal");
         verticalMove = Input.GetAxis("Vertical");
     }
     private void FixedUpdate()
     {
-                Player.Move(new Vector3 (horizontalMove,0, verticalMove) * speed * Time.deltaTime);
+            player.Move(new Vector3 (horizontalMove,0, verticalMove) * speed * Time.deltaTime);
     }
 }
