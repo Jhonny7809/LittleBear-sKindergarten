@@ -4,8 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - drag
   - DropArea
+  - Juego1
   layers:
   - Default
   - TransparentFX

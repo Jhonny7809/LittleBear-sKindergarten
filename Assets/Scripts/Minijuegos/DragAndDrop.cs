@@ -32,7 +32,7 @@ public class DragAndDrop : MonoBehaviour,IPointerDownHandler, IDragHandler, IPoi
     public void OnPointerUp(PointerEventData eventData)
     {
         RaycastResult raycastResult = eventData.pointerCurrentRaycast;
-        if (raycastResult.gameObject.tag == destinationTag)
+        if (raycastResult.gameObject?.tag == destinationTag)
         {
             transform.position = raycastResult.gameObject.transform.position;
         }
