@@ -5915,7 +5915,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventario: {fileID: 0}
-  canvasPlayerGUI: {fileID: 0}
+  canvasPlayerGUI: {fileID: 5328459418300841879}
   fpsController: {fileID: 0}
 --- !u!4 &3333986285322011075
 Transform:

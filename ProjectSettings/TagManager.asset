@@ -4,8 +4,16 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - DropArea
   - Juego1
+  - DropArea1
+  - DropArea2
+  - DropArea3
+  - DropArea4
+  - Pz1
+  - Pz2
+  - Pz3
+  - Pz4
+  - Pieza
   layers:
   - Default
   - TransparentFX

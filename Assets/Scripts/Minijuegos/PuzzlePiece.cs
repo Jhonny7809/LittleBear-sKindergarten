@@ -1,14 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class DragAndDrop : MonoBehaviour,IPointerDownHandler, IDragHandler, IPointerUpHandler
+public class PuzzlePiece : MonoBehaviour, IPointerDownHandler, IDragHandler, IPointerUpHandler
 {
     Vector3 offset;
     CanvasGroup canvasgroup;
-    public string destinationTag = "DropArea";
 
     private void Awake()
     {
@@ -31,11 +27,6 @@ public class DragAndDrop : MonoBehaviour,IPointerDownHandler, IDragHandler, IPoi
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        RaycastResult raycastResult = eventData.pointerCurrentRaycast;
-        if (raycastResult.gameObject?.tag == destinationTag)
-        {
-            transform.position = raycastResult.gameObject.transform.position;
-        }
         canvasgroup.alpha = 1f;
         canvasgroup.blocksRaycasts = true;
     }
