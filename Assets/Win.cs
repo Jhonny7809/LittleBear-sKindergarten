@@ -1,11 +1,15 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class Win : MonoBehaviour
 {
     public List<string> dropAreaTags; // Lista de tags de áreas de destino.
     public List<PuzzlePiece> puzzlePieces; // Lista de piezas de rompecabezas.
     public GameObject victoryPanel; // Panel de victoria.
+    public GameObject GamePanel;
+    public Button button;
+    public FPSController fpsController;
 
     private void Start()
     {
@@ -28,7 +32,7 @@ public class Win : MonoBehaviour
         if (allPiecesInPlace)
         {
             victoryPanel.SetActive(true);
-            Debug.Log("¡Ganaste!");
+            GamePanel.SetActive(false);
         }
     }
 
@@ -39,7 +43,7 @@ public class Win : MonoBehaviour
         foreach (GameObject dropArea in dropAreas)
         {
             float distance = Vector3.Distance(piece.transform.position, dropArea.transform.position);
-            float tolerance = 0.5f; // Ajusta según sea necesario.
+            float tolerance = 100f; // Ajusta según sea necesario.
 
             if (distance < tolerance)
             {
@@ -48,5 +52,13 @@ public class Win : MonoBehaviour
         }
 
         return false;
+    }
+
+    public void BackToGame()
+    {
+        victoryPanel.SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        fpsController.enabled = false;
     }
 }
