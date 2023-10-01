@@ -59,6 +59,6 @@ public class Win : MonoBehaviour
         victoryPanel.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        fpsController.enabled = false;
+        fpsController.enabled = true;
     }
 }

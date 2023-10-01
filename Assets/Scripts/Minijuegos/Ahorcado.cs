@@ -8,18 +8,23 @@ public class Ahorcado : MonoBehaviour
     public Text attemptsLeftText;    // Texto para mostrar los intentos restantes.
     public InputField letterInputField; // InputField para que el jugador ingrese letras.
     public Button guessButton;       // Botón para adivinar una letra.
+    public GameObject victoryPanel;
+    public GameObject lossPanel;
+    public GameObject thisPannel;
+    public FPSController fpsController;
 
-    private string secretWord;
+    public string secretWord;
     private string guessedLetters;
     private int maxAttempts;
     private int attemptsLeft;
 
     private void Start()
     {
-        secretWord = "OAXACA"; // Palabra específica para el juego de terror.
         maxAttempts = 6;
         attemptsLeft = maxAttempts;
         guessedLetters = "";
+        victoryPanel.SetActive(false);
+        lossPanel.SetActive(false);
 
         UpdateUI();
     }
@@ -45,7 +50,17 @@ public class Ahorcado : MonoBehaviour
 
         if (IsGameOver())
         {
-            // El juego ha terminado, puedes mostrar un mensaje aquí.
+            if (attemptsLeft <= 0)
+            {
+                // Si el jugador perdió, activa el panel de derrota.
+                lossPanel.SetActive(true);
+            }
+            else
+            {
+                // Si el jugador ganó, activa el panel de victoria.
+                victoryPanel.SetActive(true);
+                thisPannel.SetActive(false);
+            }
         }
     }
 
@@ -75,16 +90,25 @@ public class Ahorcado : MonoBehaviour
 
     private bool IsGameOver()
     {
-        if (attemptsLeft <= 0)
-        {
-            // El jugador perdió, puedes mostrar un mensaje aquí.
-            return true;
-        }
-        else if (!GetMaskedWord().Contains("_"))
-        {
-            // El jugador ganó, puedes mostrar un mensaje aquí.
-            return true;
-        }
-        return false;
+        return attemptsLeft <= 0 || !GetMaskedWord().Contains("_");
+    }
+    public void BackToGame()
+    {
+        victoryPanel.SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        fpsController.enabled = true;
+    }
+    public void RestartGame()
+    {
+        // Reinicia las variables del juego.
+        attemptsLeft = maxAttempts;
+        guessedLetters = secretWord.Length > 0 ? new string('_', secretWord.Length) : "";
+
+        // Oculta el panel de derrota.
+        lossPanel.SetActive(false);
+
+        // Actualiza la interfaz de usuario.
+        UpdateUI();
     }
 }
