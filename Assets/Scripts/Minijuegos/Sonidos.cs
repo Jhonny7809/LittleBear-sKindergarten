@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class Sonidos : MonoBehaviour
 {
-    public GameObject coll;
-    public AudioSource audiosource;
-    private void OnTriggerEnter(Collider other)
+    public Animator anim;
+
+    public void OnTriggerStay(Collider collision)
     {
-        if (other.tag == "Player" && !audiosource.isPlaying)
+        if (collision.gameObject.tag == "Player")
         {
-            audiosource.Play();
-            coll.SetActive(false);
+            if (Input.GetButtonDown("Fire1"))
+            {
+                anim.SetBool(("Abrir"), true);
+                Debug.Log("clikc");
+            }
         }
     }
 }

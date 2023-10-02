@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Puertas : MonoBehaviour
 {
-    public AudioSource sonido1;
-    public AudioSource sonido2;
     public Animator anim;
+    public AudioSource coll;
+    public AudioSource audiosource;
 
     public void OnTriggerStay(Collider collision)
     {
@@ -14,9 +14,10 @@ public class Puertas : MonoBehaviour
         {
             if (Input.GetButtonDown("Fire1"))
             {
+                coll.Stop();
                 anim.SetBool(("Abrir"), true);
-                sonido1.Pause();
-                sonido2.Play();
+                audiosource.Play();
+                Debug.Log("clikc");
             }
         }
     }
