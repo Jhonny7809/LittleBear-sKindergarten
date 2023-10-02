@@ -17,7 +17,6 @@ public class Puertas : MonoBehaviour
                 coll.Stop();
                 anim.SetBool(("Abrir"), true);
                 audiosource.Play();
-                Debug.Log("clikc");
             }
         }
     }

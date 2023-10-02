@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ObjectInteract : MonoBehaviour
 {
+    public GameObject pz;
     public Inventario inventario;
     // Start is called before the first frame update
     void Start()
@@ -16,6 +17,7 @@ public class ObjectInteract : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             inventario.Cantidad = inventario.Cantidad += 1;
+            pz.SetActive(true);
             Destroy(gameObject);
         }
     }

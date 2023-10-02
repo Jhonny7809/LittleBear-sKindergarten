@@ -18,6 +18,8 @@ public class Ahorcado : MonoBehaviour
     private int maxAttempts;
     private int attemptsLeft;
 
+    public bool completado;
+
     private void Start()
     {
         maxAttempts = 6;
@@ -60,6 +62,7 @@ public class Ahorcado : MonoBehaviour
                 // Si el jugador ganó, activa el panel de victoria.
                 victoryPanel.SetActive(true);
                 thisPannel.SetActive(false);
+                completado = true;
             }
         }
     }

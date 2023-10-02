@@ -10,6 +10,7 @@ public class Win : MonoBehaviour
     public GameObject GamePanel;
     public Button button;
     public FPSController fpsController;
+    public bool completado;
 
     private void Start()
     {
@@ -33,6 +34,7 @@ public class Win : MonoBehaviour
         {
             victoryPanel.SetActive(true);
             GamePanel.SetActive(false);
+            completado = true;
         }
     }
 
