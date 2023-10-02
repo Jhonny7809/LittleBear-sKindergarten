@@ -16,4 +16,9 @@ public class MenuInicial : MonoBehaviour
         Debug.Log("Salir");
         Application.Quit();
     }
+
+    public void Credios()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +2);
+    }
 }
