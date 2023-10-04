@@ -8,7 +8,7 @@ public class Screamer : MonoBehaviour
 
     public CameraShake cameraShake;
 
-    public GameObject canvas;
+    public GameObject Panel;
 
     public GameObject coll;
 
@@ -20,7 +20,7 @@ public class Screamer : MonoBehaviour
         {
             if (!activated)
             {
-                canvas.SetActive(true);
+                Panel.SetActive(true);
                 audioSource.enabled = true;
                 StartCoroutine(cameraShake.Temblor());
             }
@@ -31,7 +31,7 @@ public class Screamer : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            canvas.SetActive(false); 
+            Panel.SetActive(false); 
             audioSource.enabled = false;
             Destroy(coll); coll = null;
         }

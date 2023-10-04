@@ -11,7 +11,13 @@ public class PrimerSonido : MonoBehaviour
         if (other.tag == "Player" && !audiosource.isPlaying)
         {
             audiosource.Play();
-            coll.SetActive(false);
+            
+            
         }
+
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        Destroy(coll);
     }
 }

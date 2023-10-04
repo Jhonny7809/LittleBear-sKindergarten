@@ -5,7 +5,7 @@ using UnityEngine.Experimental.GlobalIllumination;
 
 public class ColliderTrigger : MonoBehaviour
 {
-    public GameObject audioSorce;
+    public  AudioSource audioSorce;
 
     //public GameObject objeto;
 
@@ -40,7 +40,7 @@ public class ColliderTrigger : MonoBehaviour
                 Luz.SetActive(true);
                 activated = true;
 
-                audioSorce.SetActive(true);
+                audioSorce.Play();
                 //objeto.SetActive(true);
 
                 StartCoroutine(cameraShake.Temblor());
@@ -58,7 +58,7 @@ public class ColliderTrigger : MonoBehaviour
         if (other.tag == "Player")
         {
             Luz.SetActive(false);
-            audioSorce.SetActive(false) ;
+            audioSorce.Pause();
             Coll.transform.position = Coll.transform.position + new Vector3(-50, -50, 0);
         }
         
