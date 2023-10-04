@@ -13,7 +13,7 @@ public class Sonidos : MonoBehaviour
             if (Input.GetButtonDown("Fire1"))
             {
                 anim.SetBool(("Abrir"), true);
-                Debug.Log("clikc");
+                
             }
         }
     }

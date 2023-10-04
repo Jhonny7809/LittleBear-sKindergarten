@@ -19,12 +19,10 @@ public class Linterna : MonoBehaviour
             if (LightFlashLight.enabled == true)
             {
                 LightFlashLight.enabled = false;
-                Debug.Log("Apago");
             }
             else if (LightFlashLight.enabled == false)
             {
                 LightFlashLight.enabled = true;
-                Debug.Log("Prendio");
             }
         }
     }

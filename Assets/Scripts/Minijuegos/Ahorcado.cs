@@ -12,6 +12,7 @@ public class Ahorcado : MonoBehaviour
     public GameObject lossPanel;
     public GameObject thisPannel;
     public FPSController fpsController;
+    public GameObject hud;
 
     public string secretWord;
     private string guessedLetters;
@@ -97,6 +98,7 @@ public class Ahorcado : MonoBehaviour
     }
     public void BackToGame()
     {
+        hud.SetActive(true);
         victoryPanel.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;

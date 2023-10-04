@@ -17,21 +17,9 @@ public class ColliderTrigger : MonoBehaviour
 
     private bool activated = false;
     public float Rotacion = 1.0f;
-    
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Entro a Trigger");
         if(other.tag == "Player")
         {
 
@@ -53,12 +41,9 @@ public class ColliderTrigger : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        Debug.Log("Salio de Trigger");
-
         if (other.tag == "Player")
         {
             Luz.SetActive(false);
-            audioSorce.Pause();
             Coll.transform.position = Coll.transform.position + new Vector3(-50, -50, 0);
         }
         

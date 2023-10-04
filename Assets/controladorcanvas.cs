@@ -8,7 +8,7 @@ public class controladorcanvas : MonoBehaviour
         public float tiempoEspera ; // Tiempo en segundos para esperar antes de desactivar el Canvas
         public GameObject Panel;
 
-        private void Start()
+        private void Update()
         {
             
             StartCoroutine(DesactivarCanvasDespuesDeEspera());

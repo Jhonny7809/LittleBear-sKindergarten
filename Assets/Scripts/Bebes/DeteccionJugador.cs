@@ -20,6 +20,8 @@ public class DeteccionJugador : MonoBehaviour
 
     public GameObject canvas;
 
+    public GameObject objetivo;
+
     private bool activated = false;
     void Start()
     {
@@ -54,7 +56,7 @@ public class DeteccionJugador : MonoBehaviour
             {
                 canvas.SetActive(true);
                 audioSource.Play();
-                Debug.Log("Activado");
+                objetivo.SetActive(true);
             }
             Destroy(Bebe);
         }

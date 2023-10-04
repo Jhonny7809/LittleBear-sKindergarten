@@ -11,6 +11,7 @@ public class Win : MonoBehaviour
     public Button button;
     public FPSController fpsController;
     public bool completado;
+    public GameObject hud;
 
     private void Start()
     {
@@ -58,6 +59,7 @@ public class Win : MonoBehaviour
 
     public void BackToGame()
     {
+        hud.SetActive(false);
         victoryPanel.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;

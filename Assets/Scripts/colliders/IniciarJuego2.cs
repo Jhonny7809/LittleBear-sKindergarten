@@ -5,6 +5,7 @@ using UnityEngine;
 public class IniciarJuego2 : MonoBehaviour
 {
     public GameObject canvasPlayerGUI;
+    public GameObject hud;
     public FPSController fpsController;
     void Start()
     {
@@ -14,10 +15,11 @@ public class IniciarJuego2 : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-                canvasPlayerGUI.SetActive(true);
-                Cursor.lockState = CursorLockMode.None;
-                Cursor.visible = true;
-                fpsController.enabled = false;
+            hud.SetActive(false);
+            canvasPlayerGUI.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            fpsController.enabled = false;
             Destroy(gameObject);
         }
     }

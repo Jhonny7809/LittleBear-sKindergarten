@@ -12,18 +12,13 @@ public class Screamer : MonoBehaviour
 
     public GameObject coll;
 
-    private bool activated = false;
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
-            if (!activated)
-            {
                 Panel.SetActive(true);
                 audioSource.enabled = true;
                 StartCoroutine(cameraShake.Temblor());
-            }
         }
     }
 

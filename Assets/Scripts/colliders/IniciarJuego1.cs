@@ -6,6 +6,7 @@ public class IniciarJuego1 : MonoBehaviour
 {
     public Inventario inventario;
     public GameObject canvasPlayerGUI;
+    public GameObject hud;
     public FPSController fpsController;
     void Start()
     {
@@ -16,10 +17,11 @@ public class IniciarJuego1 : MonoBehaviour
     {
         if (other.CompareTag("Player") && inventario.Cantidad == 4)
         {
-                canvasPlayerGUI.SetActive(true);
-                Cursor.lockState = CursorLockMode.None;
-                Cursor.visible = true;
-                fpsController.enabled = false;
+            hud.SetActive(false);
+            canvasPlayerGUI.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            fpsController.enabled = false;
             Destroy(gameObject);
         }
     }
