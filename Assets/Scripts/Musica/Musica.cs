@@ -12,7 +12,7 @@ public class Musica : MonoBehaviour
     {
         _msrc = GetComponent<AudioSource>();
         _msrc.volume = 0f;
-        StartCoroutine(Fade(true, _msrc, 2f, 0.21f));
+        StartCoroutine(Fade(true, _msrc, 2f, 0.07f));
         StartCoroutine(Fade(false, _msrc, 2f, 0f));
     }
 
@@ -21,7 +21,7 @@ public class Musica : MonoBehaviour
         if (!_msrc.isPlaying)
         {
             _msrc.Play();
-            StartCoroutine(Fade(true, _msrc, 2f, 0.21f));
+            StartCoroutine(Fade(true, _msrc, 2f, 0.07f));
             StartCoroutine(Fade(false, _msrc, 2f, 0f));
         }
     }
